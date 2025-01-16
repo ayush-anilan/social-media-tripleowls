@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 
-app.use(cors({ origin: "https://social-media-tripleowls.vercel.app" }));
+app.use(cors({ origin: "https://social-media-frontend-lemon.vercel.app" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
