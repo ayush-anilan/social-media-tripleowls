@@ -21,6 +21,8 @@ const AdminDashboard = () => {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setSubmissions(response.data);
+                console.log(response.data);
+
             } catch (error) {
                 console.error('Error fetching submissions:', error);
 
@@ -56,7 +58,7 @@ const AdminDashboard = () => {
                             {submission.images.map((image, index) => (
                                 <img
                                     key={index}
-                                    src={`${import.meta.env.VITE_BACKEND_URL}/${image}`}
+                                    src={image}
                                     alt="Submission"
                                     className="w-24 h-24 object-cover rounded-lg border border-gray-300"
                                 />
