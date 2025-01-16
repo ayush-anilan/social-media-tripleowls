@@ -25,7 +25,7 @@ const UserForm = () => {
         Array.from(images).forEach((file) => data.append('images', file));
 
         try {
-            await axios.post(`${import.meta.env.VITE_BACKEND_URL}api/submit`, data, {
+            await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/submit`, data, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             alert('Submission successful!');
